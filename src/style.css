@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 body {
+
+    font-family: "Roboto";
+
     background-image: url(images/backgrounds/tiger.jpeg);
     background-repeat:no-repeat;
     background-size:cover;
@@ -23,6 +27,7 @@ body {
 }
 
 h1, h2, h3 {
+    font-family:"Old Standard";
     color: #ff8800;
     margin-bottom: -10px;
 }
@@ -37,8 +42,9 @@ ul li ul li{
 
 
 .box {
-    min-width: 200px;
-    min-height: 80px;
+    min-width: 1vw;
+    min-height: 0.6vh;
+
     align-content: center;
     
     border-style: solid;
@@ -47,6 +53,7 @@ ul li ul li{
     border-radius: 20px;
 
     background-color: rgba(0, 0, 0, 0.8);
+
     padding: 10px 30px;
     margin: 0 20px 20px;
 }
@@ -57,19 +64,23 @@ header {
 }
 
 .mid{
-    width: 800px;
-
+    width: 40vw;
     
 }
 
 aside{
-    min-width: 332px;
-    max-width: min-content;
+    min-width: 10vw;
+    max-width: 20vw;
+    /* max-width: min-content; */
     
 }
 
 
 /* champion grid */
+/* .championGrid {
+    max-width: 15vw;
+} */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
