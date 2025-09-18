@@ -86,6 +86,9 @@ aside{
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 16px;
+
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .champion-entry {
@@ -96,10 +99,10 @@ aside{
 }
 
 .champion-entry img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    max-width: 80px;
+    height: auto;
     object-fit: contain;
-    image-rendering: auto;
 }
 
 .champion-entry span {
@@ -119,4 +122,35 @@ aside{
 
 ::-webkit-scrollbar-track {
     background: transparent;
+}
+
+/* === Imagens da grid responsivas === */
+@media (max-width: 768px) {
+    .champion-entry img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .champion-entry span {
+        font-size: 16px;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .champion-entry img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .champion-entry span {
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
 }
